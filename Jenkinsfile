@@ -6,7 +6,7 @@ pipeline {
             
             steps {
                 script {
-                    echo env.BRANCH_NAME
+                    echo currentBuild.result
                 }
             }
         }
