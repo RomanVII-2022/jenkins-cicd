@@ -10,7 +10,7 @@ pipeline {
             
             steps {
                 script {
-                    echo "${MY_CREDENTIAL_USR}"
+                    echo '${MY_CREDENTIAL_USR}'
                 }
             }
         }
