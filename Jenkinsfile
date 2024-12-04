@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MY_CREDENTIAL = credential('project-one-id')
+        MY_CREDENTIAL = credentials('project-one-id')
     }
 
     stages {
