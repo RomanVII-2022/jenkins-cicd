@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MY_CREDENTIAL = credentials('project-one-id')
+        MY_CREDENTIAL = credentials('ssh_test_id')
     }
 
     stages {
