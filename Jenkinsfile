@@ -1,12 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        MY_CREDENTIAL = credential('project-one-id')
+    }
+
     stages {
         stage ("hello") {
             
             steps {
                 script {
-                    echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} branch name ${env.BRANCH_NAME}"
+                    echo "${MY_CREDENTIAL}"
                 }
             }
         }
