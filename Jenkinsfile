@@ -3,9 +3,12 @@ pipeline {
 
     stages {
         stage ("hello") {
+            when {
+                env.BRANCH_NAME == "main"
+            }
             steps {
                 script {
-                    echo "Hello, World!"
+                    echo env.BRANCH_NAME
                 }
             }
         }
